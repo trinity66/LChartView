@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LChartTopView">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="放大倍数" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="J1s-Wx-bv4">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="Rdl-1C-enx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨收：2222.00 今开：3333.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-Vs-b7E">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="HQ8-p3-Uxd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高：3340.00 最低：3200.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-wO-5zt">
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oXE-9Y-cGO">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="9MJ-JN-p1Y"/>
+                    </constraints>
+                    <segments>
+                        <segment title="1.0"/>
+                        <segment title="1.5"/>
+                        <segment title="2.0"/>
+                    </segments>
+                    <connections>
+                        <action selector="segChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="KbB-Qu-h8K"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Y0g-Vs-b7E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-2" id="3Vg-25-Bme"/>
+                <constraint firstAttribute="bottom" secondItem="J1s-Wx-bv4" secondAttribute="bottom" id="I59-g9-x1F"/>
+                <constraint firstAttribute="bottom" secondItem="oXE-9Y-cGO" secondAttribute="bottom" constant="5" id="IbH-Eb-4ud"/>
+                <constraint firstItem="Y0g-Vs-b7E" firstAttribute="leading" secondItem="oXE-9Y-cGO" secondAttribute="trailing" id="Jj8-XU-YsG"/>
+                <constraint firstItem="oXE-9Y-cGO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="LMX-GM-iko"/>
+                <constraint firstItem="EZH-wO-5zt" firstAttribute="height" secondItem="Y0g-Vs-b7E" secondAttribute="height" id="OBj-s2-T3Z"/>
+                <constraint firstItem="EZH-wO-5zt" firstAttribute="centerX" secondItem="Y0g-Vs-b7E" secondAttribute="centerX" id="Yts-uD-ajk"/>
+                <constraint firstItem="EZH-wO-5zt" firstAttribute="top" secondItem="Y0g-Vs-b7E" secondAttribute="bottom" constant="-10" id="Z1Y-2B-8EX"/>
+                <constraint firstItem="J1s-Wx-bv4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bRg-Tc-t2Y"/>
+                <constraint firstItem="EZH-wO-5zt" firstAttribute="width" secondItem="Y0g-Vs-b7E" secondAttribute="width" id="czx-cg-RWB"/>
+                <constraint firstAttribute="trailing" secondItem="Y0g-Vs-b7E" secondAttribute="trailing" id="gv1-n2-9Ip"/>
+                <constraint firstItem="J1s-Wx-bv4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iHE-62-xxO"/>
+                <constraint firstItem="oXE-9Y-cGO" firstAttribute="leading" secondItem="J1s-Wx-bv4" secondAttribute="trailing" constant="3" id="xFh-gS-7Qm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label2" destination="EZH-wO-5zt" id="nTC-bz-9Ap"/>
+                <outlet property="lable1" destination="Y0g-Vs-b7E" id="QH6-dg-hDb"/>
+                <outlet property="scaleLabel" destination="J1s-Wx-bv4" id="jwv-wl-mjW"/>
+                <outlet property="scaleSeg" destination="oXE-9Y-cGO" id="Qab-E8-0NU"/>
+            </connections>
+            <point key="canvasLocation" x="53.5" y="43"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LineChartDataView">
+            <rect key="frame" x="0.0" y="0.0" width="104" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es2-B0-YW0">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="8gU-b9-HdQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数值:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Gu8-7i-HRq">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="AAb-5S-Pj2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.79551750886524819" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="es2-B0-YW0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="GCa-eu-aag"/>
+                <constraint firstAttribute="trailing" secondItem="es2-B0-YW0" secondAttribute="trailing" constant="5" id="NrG-9u-51z"/>
+                <constraint firstItem="es2-B0-YW0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="Ub7-z6-jgo"/>
+                <constraint firstItem="Gu8-7i-HRq" firstAttribute="width" secondItem="es2-B0-YW0" secondAttribute="width" id="YEc-8x-1Ff"/>
+                <constraint firstItem="Gu8-7i-HRq" firstAttribute="top" secondItem="es2-B0-YW0" secondAttribute="bottom" constant="-3" id="bpv-OH-oXc"/>
+                <constraint firstItem="Gu8-7i-HRq" firstAttribute="centerX" secondItem="es2-B0-YW0" secondAttribute="centerX" id="uFm-DM-zcc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                    <real key="value" value="0.5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="data" destination="Gu8-7i-HRq" id="J5V-Zc-qq0"/>
+                <outlet property="time" destination="es2-B0-YW0" id="CSC-wC-QyN"/>
+            </connections>
+            <point key="canvasLocation" x="171" y="-26"/>
+        </view>
+    </objects>
+</document>
